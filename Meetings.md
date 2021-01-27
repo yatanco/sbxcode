@@ -49,6 +49,11 @@ Flutter vs React
 
 # Notes
 
+Installing Expo
+Meetings on Github
+MVC - youtube
+
+
 ## January 13th, 2021
 
 Notes
