@@ -47,14 +47,7 @@ Flutter vs React
 
 ## January 27th, 2021
 
-Notes
-
-
-
-
-
-
-
+# Notes
 
 ## January 13th, 2021
 
