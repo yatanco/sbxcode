@@ -15,6 +15,9 @@ App Stores    4
 Steps to Get an App on to the Play Store    4
 
 
+References: 
+https://docs.google.com/document/d/1SZyimcfUIrPFndIMrclSCMvSGZLWYsiugrFvo3kJRs0/edit# 
+
 ## Objectives
  Learning Programming
 Transferable Skills
