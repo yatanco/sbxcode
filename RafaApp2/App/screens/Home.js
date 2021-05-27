@@ -102,7 +102,7 @@ export default ({ navigation }) => {
               resizeMode="contain"
             />
           </View>
-          <Text style={styles.textHeader}>Oh Yeah!</Text>
+          <Text style={styles.textHeader}>Atos Simples</Text>
           {isLoading ? (
             <ActivityIndicator color={colors.white} size="large" />
           ) : (
