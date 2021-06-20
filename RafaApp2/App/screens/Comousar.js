@@ -1,38 +1,41 @@
 import React from 'react';
-import { View, Text, SafeAreaView, StyleSheet } from 'react-native';
+import { SafeAreaView, ScrollView, TouchableOpacity, Linking, Alert } from 'react-native';
 
 import { Entypo } from '@expo/vector-icons';
 
 import colors from '../constants/colors';
 
-const styles = StyleSheet.create({
-  text: {
-    paddingHorizontal: 20,
-    paddingVertical: 16,
-    fontSize: 26,
-    color: colors.text,
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between"
-  },
-  separator: {
-    backgroundColor: colors.border,
-    height: StyleSheet.hairlineWidth,
-    marginLeft: 20
-  }
+import { TextItem, TextSeparator } from '../components/TextItem'
+
+const openUrl = (url) => {
+  return Linking.openURL(url).catch(() => {
+  Alert.alert('Desculpe, algo deu errado.', 'Por favor tente de novo mais tarde.');
 });
+}
 
 export default () => {
   return (
-    <SafeAreaView>
-      <Text style={styles.text}>
-        Como Usar
-        <Entypo name="heart" size={20} color={colors.red} /> 
-      </Text>
+    <SafeAreaView style={{ flex: 1 }}>
+      <ScrollView>
 
-      <View style={styles.separator} />
+        <TextItem 
+          text="Como Usar"
+          rightIcon={
+            <Entypo name="heart" size={20} color={colors.red} />
+          }
+        />
 
-      <Text style={styles.text}>Olá</Text>
+        <TextSeparator />
+
+        <TextItem 
+          text="Olá, tudo bem?"
+        />
+
+        <TouchableOpacity onPress={() => openUrl('https://www.kurytibametropole.org/')}>
+          <Entypo name="heart" size={50} color={colors.red} style={{marginLeft: 165, paddingTop: 100}} />
+        </TouchableOpacity>
+
+      </ScrollView>
     </SafeAreaView>
   );
 };
